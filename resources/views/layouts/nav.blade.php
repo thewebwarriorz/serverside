@@ -31,7 +31,7 @@
                         </li>
                         @else
                             <li>
-                                <a class="nav-link text-white" href="/refresh">Refresh database</a>
+                                <a class="nav-link text-white" href="/update">Update database</a>
                             </li>
 
                             <li class="nav-item dropdown">
