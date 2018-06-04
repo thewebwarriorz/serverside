@@ -1,4 +1,3 @@
-
 // Body
 $body-bg: #f5f8fa;
 
@@ -6,3 +5,60 @@ $body-bg: #f5f8fa;
 $font-family-sans-serif: "Raleway", sans-serif;
 $font-size-base: 0.9rem;
 $line-height-base: 1.6;
+
+// Additional colors
+$interface-lime: #DAF7A6;
+$interface-yellow: #FFC300;
+$interface-orange: #FF5733;
+$interface-red: #C70039;
+$interface-dark-red: #900C3F;
+$interface-purple: #581845;
+
+// Additional helpers
+.interface-lime {
+  color: $interface-lime;
+}
+
+.interface-yellow {
+  color: $interface-yellow;
+}
+
+.interface-orange {
+  color: $interface-orange;
+}
+
+.interface-red {
+  color: $interface-red;
+}
+
+.interface-dark-red {
+  color: $interface-dark-red;
+}
+
+.interface-purple {
+  color: $interface-purple;
+}
+
+.interface-lime-bg {
+  background-color: $interface-lime;
+}
+
+.interface-yellow-bg {
+  background-color: $interface-yellow;
+}
+
+.interface-orange-bg {
+  background-color: $interface-orange;
+}
+
+.interface-red-bg {
+  background-color: $interface-red;
+}
+
+.interface-dark-red-bg {
+  background-color: $interface-dark-red;
+}
+
+.interface-purple-bg {
+  background-color: $interface-purple;
+}

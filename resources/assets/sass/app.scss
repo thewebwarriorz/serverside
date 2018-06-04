@@ -1,14 +1,51 @@
-
 // Fonts
 @import url("https://fonts.googleapis.com/css?family=Raleway:300,400,600");
-
 // Variables
 @import "variables";
-
+// Stripes
+@import "stripes";
 // Bootstrap
 @import '~bootstrap/scss/bootstrap';
+// Helpers
+@import "helpers";
 
-.navbar-laravel {
-  background-color: #fff;
-  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.04);
+/*--------------------------------------------------
+  Global
+-------------------------------------------------- */
+html {
+  position: relative;
+  height: 100%;
+}
+
+a, a:active, a:visited, .btn-link {
+  color: $interface-red;
+}
+
+a:hover, .btn-link:hover {
+  color: $interface-dark-red;
+}
+
+/*--------------------------------------------------
+  Helpers
+-------------------------------------------------- */
+.red-stripes-bg {
+  @include simple-stripes($interface-red, $interface-dark-red, 40px, true);
+}
+
+/*--------------------------------------------------
+  Sticky footer
+-------------------------------------------------- */
+.footer {
+  position: absolute;
+  bottom: 0;
+  width: 100%;
+  height: 60px;
+  line-height: 60px;
+  background-color: $interface-dark-red;
+  color: $white;
+}
+
+.footer > .container {
+  padding-right: 15px;
+  padding-left: 15px;
 }

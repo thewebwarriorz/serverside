@@ -1,0 +1,36 @@
+//========== striped-bg ============//
+
+@mixin striped-bg($stripe-color: rgb(255, 0, 0), $secondary-stripe-color: rgba(0, 0, 0, 0),  $stripes-num: 4,$direction: 45deg) {
+
+  $stripes-num: $stripes-num * 2;
+  $stripe-width: 100% /$stripes-num;
+  $gradient: ();
+
+  @for $i from 1 through ($stripes-num - 1) {
+    $item: $stripe-color;
+    $dump: ();
+
+    @if $i % 2  == 0 {
+      $dump: $item $stripe-width * ($i), $secondary-stripe-color $stripe-width * $i;
+    } @else {
+      $dump: $secondary-stripe-color $stripe-width * $i, $item $stripe-width * ($i);
+    }
+    $gradient: join($gradient, $dump, comma);
+  }
+  background: linear-gradient($direction, $gradient);
+}
+
+//========== simple-stripes============//
+
+@mixin simple-stripes($color: rgb(255, 0, 0), $secondary-color: rgba(0, 0, 0, 0), $size: 100px, $mirrored: false) {
+  $angle: 45deg;
+  @if $mirrored {
+    $angle: $angle * -1
+  }
+  @if $size % 2 != 0 {
+    $size: $size + 1px;
+  }
+  $intensity: 2;
+  @include striped-bg($color, $secondary-color, $intensity, $angle);
+  background-size: $size $size;
+}

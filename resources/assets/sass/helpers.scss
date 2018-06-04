@@ -1,0 +1,51 @@
+/*--------------------------------------------------
+  Margin and padding helpers
+-------------------------------------------------- */
+$spaceamounts: (5, 10, 15, 20, 25, 30, 35, 40, 45, 50, 75, 100, 105, 110, 115, 120, 125, 130, 135, 140, 145, 150, 175, 200);
+$sides: (top, bottom, left, right);
+
+// Generate the paddings, and margins
+@each $space in $spaceamounts {
+  @each $side in $sides {
+    .margin-#{$side}-#{$space}px {
+      margin-#{$side}: #{$space}px !important;
+    }
+
+    .padding-#{$side}-#{$space}px {
+      padding-#{$side}: #{$space}px !important;
+    }
+  }
+}
+
+// Generate equal margins and paddings
+@each $space in $spaceamounts {
+  .margin-#{$space}px {
+    margin: #{$space}px !important;
+  }
+
+  .padding-#{$space}px {
+    padding: #{$space}px !important;
+  }
+}
+
+// Generate the no paddings, and no margins
+@each $side in $sides {
+  .nomargin-#{$side} {
+    margin-#{$side}: 0 !important;
+  }
+
+  .nopadding-#{$side} {
+    padding-#{$side}: 0 !important;
+  }
+}
+
+/*--------------------------------------------------
+  Font helpers
+-------------------------------------------------- */
+$sizeamounts: (8, 9, 10, 11, 12, 14, 16, 18, 20, 24, 30, 36, 48);
+
+@each $size in $sizeamounts {
+  .font-size-#{$size}px {
+    font-size: #{$size}px !important;
+  }
+}
