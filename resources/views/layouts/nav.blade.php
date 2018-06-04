@@ -1,5 +1,5 @@
 <div id="nav">
-    <nav class="navbar navbar-expand-md fixed-top interface-dark-red-bg">
+    <nav class="navbar navbar-expand-lg fixed-top interface-dark-red-bg">
         <div class="container">
             <a class="navbar-brand text-white" href="{{ url('/') }}">
                 {{ config('app.name', 'ServerSide') }}

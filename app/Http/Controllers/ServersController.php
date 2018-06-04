@@ -57,7 +57,7 @@ class ServersController extends Controller
         $serverDetails = Servers::find($serverId)->toArray();
 
         // Get the server details
-        $serversStatisticRaw = ServersStatistic::getStatisticSummaryById($serverId);
+        $serversStatisticRaw = ServersStatistics::getStatisticSummaryById($serverId);
         $serversStatistic[$serverId] = $serversStatisticRaw[0];
 
         return view('statistic', with(['serverId' => $serverId, 'serversStatistic' => $serversStatistic, 'serverName' => $serverDetails['server_name']]));
@@ -72,7 +72,7 @@ class ServersController extends Controller
      */
     public function chart(Request $request)
     {
-        $result = ServersStatistic::getStatisticById($request->id);
+        $result = ServersStatistics::getStatisticById($request->id);
 
         $counter = 0;
         foreach ($result as $data) {
