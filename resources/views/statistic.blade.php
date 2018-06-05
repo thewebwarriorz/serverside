@@ -14,8 +14,8 @@
             </div>
         </div>
     </div>
-    <div class="container-fluid">
-        <div class="chart-container" style="position: relative; height:40vh; width:80vw; padding-left:15vw">
+    <div class="container margin-top-15px">
+        <div class="chart-container" >
             <canvas id="chart"></canvas>
         </div>
         <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
